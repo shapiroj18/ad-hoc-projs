@@ -1,0 +1,40 @@
+Mon Sep 21 11:05:00 EDT 2020
+--2020-09-21 11:05:00--  https://raw.githubusercontent.com/nytimes/covid-19-data/master/excess-deaths/deaths.csv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 199.232.36.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|199.232.36.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 408808 (399K) [text/plain]
+Saving to: ‘/tmp/deaths.csv’
+
+     0K .......... .......... .......... .......... .......... 12%  143K 2s
+    50K .......... .......... .......... .......... .......... 25%  149K 2s
+   100K .......... .......... .......... .......... .......... 37%  355K 1s
+   150K .......... .......... .......... .......... .......... 50%  538K 1s
+   200K .......... .......... .......... .......... .......... 62%  718K 1s
+   250K .......... .......... .......... .......... .......... 75%  772K 0s
+   300K .......... .......... .......... .......... .......... 87%  947K 0s
+   350K .......... .......... .......... .......... ......... 100% 1.01M=1.2s
+
+2020-09-21 11:05:03 (346 KB/s) - ‘/tmp/deaths.csv’ saved [408808/408808]
+
+COPY 6712
+Mon Sep 21 11:06:00 EDT 2020
+--2020-09-21 11:06:00--  https://raw.githubusercontent.com/nytimes/covid-19-data/master/excess-deaths/deaths.csv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 199.232.36.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|199.232.36.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 408808 (399K) [text/plain]
+Saving to: ‘/tmp/deaths.csv’
+
+     0K .......... .......... .......... .......... .......... 12%  572K 1s
+    50K .......... .......... .......... .......... .......... 25%  641K 0s
+   100K .......... .......... .......... .......... .......... 37%  564K 0s
+   150K .......... .......... .......... .......... .......... 50%  681K 0s
+   200K .......... .......... .......... .......... .......... 62%  937K 0s
+   250K .......... .......... .......... .......... .......... 75%  716K 0s
+   300K .......... .......... .......... .......... .......... 87% 1.15M 0s
+   350K .......... .......... .......... .......... ......... 100%  967K=0.5s
+
+2020-09-21 11:06:01 (734 KB/s) - ‘/tmp/deaths.csv’ saved [408808/408808]
+
+COPY 6712
