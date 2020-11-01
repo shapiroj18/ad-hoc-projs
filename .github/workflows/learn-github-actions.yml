@@ -1,7 +1,7 @@
 name: learn-github-actions
 on: [push]
 jobs:
-    heck-bats-version:
+    check-bats-version:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
