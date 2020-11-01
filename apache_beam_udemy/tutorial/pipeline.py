@@ -20,6 +20,7 @@ class CalcVisitDuration(beam.DoFn):
 
         yield [element[0], diff.total_seconds()]
 
+
 class GetIpCountryOrigin(beam.DoFn):
     def process(self, element):
         ip = element[0]
@@ -28,23 +29,22 @@ class GetIpCountryOrigin(beam.DoFn):
 
         yield [ip, country]
 
+
 def map_country_to_ip(element, ip_map):
     ip = element[0]
     return [ip_map[ip], element[1]]
 
 
-
-
-def run(argv = None):
+def run(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument("--input")
     parser.add_argument("--output")
     args, beam_args = parser.parse_known_args(argv)
 
-    with beam.Pipeline(argv = beam_args) as p:
+    with beam.Pipeline(argv=beam_args) as p:
         lines = (
             p
-            | "ReadFile" >> beam.io.ReadFromText(args.input, skip_header_lines = 1)
+            | "ReadFile" >> beam.io.ReadFromText(args.input, skip_header_lines=1)
             | "ParseLines" >> beam.Map(parse_lines)
         )
 
@@ -52,18 +52,17 @@ def run(argv = None):
         ip_map = lines | "GetIpCountryOrigin" >> beam.ParDo(GetIpCountryOrigin())
 
         result = (
-            duration 
-            | "MapIpToCountry" 
-            >> beam.Map(map_country_to_ip, ip_map = beam.pvalue.AsDict(ip_map))
+            duration
+            | "MapIpToCountry"
+            >> beam.Map(map_country_to_ip, ip_map=beam.pvalue.AsDict(ip_map))
             | "AveragebyCountry" >> beam.CombinePerKey(beam.combiners.MeanCombineFn())
             | "FormatOutput" >> beam.Map(lambda element: ",".join(map(str, element)))
-            )
-
-
+        )
 
         result | "WriteOutput" >> beam.io.WriteToText(
-            args.output, file_name_suffix = '.csv'
-            )
+            args.output, file_name_suffix=".csv"
+        )
+
 
 if __name__ == "__main__":
     logging.getLogger().setLevel(logging.WARNING)
