@@ -1,12 +1,13 @@
 import pandas as pd
 
-list = ['hello', 'world',
-'enter',
-'other enter']
+list = [
+    'list1',
+    'list2',
+    'list3'
+]
 
 
-def make_fun(test1, test2, test3
-    ):
+def make_fun(test1, test2, test3):
     '''this adds the tests
 
     '''
