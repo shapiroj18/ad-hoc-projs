@@ -1,21 +1,12 @@
 import pandas as pd
 
-list = [
-    'list1',
-    'list2',
-    'list3'
-]
+list = ["list1", "list2", "list3"]
 
 
 def make_fun(test1, test2, test3):
-    '''this adds the tests
-
-    '''
-
+    """this adds the tests"""
 
     return test1 + test2 + test3
-
-
 
 
 print(list)
