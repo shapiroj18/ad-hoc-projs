@@ -1,16 +1,8 @@
 import pandas as pd
 
-list = [
-    'Jonathan', 'Shivali'
-]
+list = ["Jonathan", "Shivali"]
 
 
-def function_test(var_1=None, var_2 = 1):
-
-
-
-
-
-
+def function_test(var_1=None, var_2=1):
 
     pass
