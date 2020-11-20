@@ -1,14 +1,17 @@
 import pandas as pd
 
-list = ["list1", "list2", "list3"]
+list = ["Jonathan", "Shivali", 
+
+"Jay"]
 
 
-def make_fun(test1, test2, test3):
-    """this adds the tests"""
+def function_test(var_1=None, var_2=1):
 
-    return test1 + test2 + test3
-
+<<<<<<< HEAD
 
 print( list)
 
 print(make_fun(1, 2, 3))
+=======
+    pass
+>>>>>>> 8d0b90f81d6666cf1971810c7e5f08d2be499209
